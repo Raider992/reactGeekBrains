@@ -1,0 +1,12 @@
+.fio {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px groove darkgreen;
+}
+
+.fio h3 {
+    text-decoration: underline;
+    font-family: Calibri;
+    color: goldenrod;
+}
