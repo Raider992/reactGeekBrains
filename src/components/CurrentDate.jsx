@@ -1,6 +1,5 @@
 import React from 'react';
 
-import extra_styles from './extra.module.css'
 
 class CurrentDate extends Component {
 
@@ -8,14 +7,14 @@ class CurrentDate extends Component {
         e.preventDefault();
         const d = new Date();
         const date = d.toLocaleDateString();
-        document.getElementById('date').innerHTML = date;
+        document.getElementById('date').value = date;
     };
 
     render() {
         return (
             <>
                 <button onClick={this.onButtonClick}>Вывод даты</button>
-                <p className={extra_styles.date} id="date"></p>
+                <input type="text" id="date"></input>
             </>
         );
     }
