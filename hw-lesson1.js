@@ -59,6 +59,7 @@ class Human {
 
     displayInfo() {
         return {name, dateOfBirth, age};
+    }
 }
 
 class Employee extends Human {
@@ -67,7 +68,18 @@ class Employee extends Human {
         this.salary = salary;
         this.department = department;
     }
+}
+
+class Developer extends Employee {
+    constructor(){
+        super(name, age, dateOfBirth, salary, department);
+    }
 
 
 }
 
+class Manager extends Employee {
+    constructor(){
+        super(name, age, dateOfBirth, salary, department);
+    }
+}
