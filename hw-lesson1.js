@@ -2,7 +2,7 @@
 
 //Задание 1:
 const loop = (times = 0, cb = null) => {
-    if (cb === null) return 'Не передана функция';
+    if (typeof(cb) !== "function") return 'Не передана функция';
     else for (let i = 0; i < times; i++) {
         cb();
     }
