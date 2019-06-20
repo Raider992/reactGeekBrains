@@ -20,13 +20,16 @@ class Blog extends Component {
             <>
                 {posts.map((item) => {
                     return (
+                        <ul>
                         <Post
+                            key={this.item.index}
                             header={item.header}
                             sub_header={item.sub_header}
                             content={item.content}
                             date={item.date}
                             author={item.author}
-                        />)
+                        />
+                        </ul>)
                 })}
                 if(this.state.modal) {
                 <Modal onBtnClick={this.handleButton()}/>

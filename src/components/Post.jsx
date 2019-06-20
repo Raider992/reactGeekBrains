@@ -3,15 +3,14 @@ import React, {Component} from 'react';
 class Post extends Component {
 
     render() {
-        console.log('222', this.props);
         return (
-            <>
+            <li key={this.props.index}>
                 <h3>{this.props.header}</h3>
                 <h5>{this.props.sub_header}</h5>
                 <p className="content">{this.props.content}</p>
                 <p className="date">{this.props.date}</p>
                 <p className="author">{this.props.author}</p>
-            </>
+            </li>
         );
     }
 }
