@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from "react-dom";
 
+import Welcome from "../components/Welcome";
+
+
 class Modal extends Component {
     constructor() {
         super(props);
@@ -11,6 +14,10 @@ class Modal extends Component {
         document.getElementById('modal').appendChild(this.el);
     }
 
+    btnClick = () =>{
+        this.props.onBtnClick();
+    };
+
     componentWillUnmount() {
         document.getElementById('modal').removeChild(this.el);
     }
@@ -18,7 +25,7 @@ class Modal extends Component {
     render() {
         console.log('m', this.props);
         return ReactDOM.createPortal(
-            this.props.children,
+            <Welcome onBtnClick={this.btnClick}/>,
             this.el
         )
     }

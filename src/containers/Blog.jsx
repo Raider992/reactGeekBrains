@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Post from '../components/Post';
 import Modal from "../components/modal/Modal";
-import Welcome from "../components/Welcome";
 
 
 class Blog extends Component {
@@ -30,9 +29,7 @@ class Blog extends Component {
                         />)
                 })}
                 if(this.state.modal) {
-                <Modal>
-                    <Welcome onBtnClick={this.handleButton()}/>
-                </Modal>
+                <Modal onBtnClick={this.handleButton()}/>
                 }
             </>
         );
