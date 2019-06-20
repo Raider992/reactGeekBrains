@@ -22,7 +22,6 @@ class Blog extends Component {
                 {posts.map((item) => {
                     return (
                         <Post
-                            key={item.index}
                             header={item.header}
                             sub_header={item.sub_header}
                             content={item.content}
