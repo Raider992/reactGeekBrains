@@ -8,6 +8,8 @@ import MainPage from './app/pages/Main';
 import Users from './app/pages/Users';
 import PageNotFound from './app/pages/PageNotFound';
 import User from './app/pages/User';
+import Posts from "./app/pages/Posts";
+import Post from "./app/pages/Post";
 
 ReactDOM.render(<Router history={browserHistory}>
   <Route path="/" component={Layout}>
@@ -15,8 +17,8 @@ ReactDOM.render(<Router history={browserHistory}>
       <Route path="users" component={Users}>
         <Route path=":userId" component={User}/>
       </Route>
-      <Route path="posts" component={Users}>
-          <Route path=":postId" component={User}/>
+      <Route path="posts" component={Posts}>
+          <Route path=":id" component={Post}/>
       </Route>
       <Route path="comments" component={Users}>
           <Route path=":commentId" component={User}/>

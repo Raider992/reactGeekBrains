@@ -27,7 +27,7 @@ export default class Layout extends Component {
                     <MenuItem href="/posts" active={this.isActive("/posts")}>
                         Посты
                     </MenuItem>
-                    <MenuItem href="/comments" active={this.isActive("/comment")}>
+                    <MenuItem href="/comments" active={this.isActive("/comments")}>
                         Комментарии
                     </MenuItem>
                 </Menu>

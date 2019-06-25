@@ -11,6 +11,7 @@ export default class User extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div>
         { this.state.user && <UserProfile {...this.state.user} /> }
