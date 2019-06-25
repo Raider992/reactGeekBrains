@@ -20,9 +20,6 @@ ReactDOM.render(<Router history={browserHistory}>
       <Route path="posts" component={Posts}>
           <Route path=":id" component={Post}/>
       </Route>
-      <Route path="comments" component={Users}>
-          <Route path=":id" component={User}/>
-      </Route>
     <Route path="*" component={PageNotFound}/>
   </Route>
 </Router>, document.querySelector('#root'));
